@@ -43,14 +43,25 @@
 
             <div class="navbar-end">
             <div class="navbar-item">
+             {% if app.user%}
+             <div class="buttons">
+                <a class="button is-primary" href="{{path('account')}}">
+                    <strong>Mon compte</strong>
+                </a>
+                <a class="button is-link" href="{{path('app_logout')}}">
+                    Se deconnecter
+                </a>
+                </div>
+             {% else %}
                 <div class="buttons">
-                <a class="button is-primary">
+                <a class="button is-primary" href="{{path('register')}}">
                     <strong>S'inscrire</strong>
                 </a>
-                <a class="button is-link">
+                <a class="button is-link" href="{{path('app_login')}}">
                     Se connecter
                 </a>
                 </div>
+            {% endif %}
             </div>
             </div>
         </div>
