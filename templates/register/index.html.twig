@@ -4,6 +4,11 @@
    <div class="columns mt-6">
         <div class="column is-three-fifths is-offset-one-fifth">
             <h1 class="mb-5 is-size-3">Formulaire d'inscription</h1>
+            {% for message in app.flashes("success")%}
+                <div class="notification is-primary">
+                    <p>{{message}}</p>
+                </div>
+            {% endfor %}
             {{ form(form)}}
         </div>
    </div>

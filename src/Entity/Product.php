@@ -52,6 +52,7 @@ class Product
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
+    
 
     public function getId(): ?int
     {
@@ -81,6 +82,7 @@ class Product
 
         return $this;
     }
+    
 
     public function getImage(): ?string
     {
